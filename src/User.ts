@@ -1,5 +1,3 @@
-import * as _ from "lodash";
-
 export class User
 {
 	public id: number;
@@ -14,10 +12,13 @@ export class User
 
 export function isValid(user: User, photoRequired: boolean): boolean
 {
-	const values: string[] = [user.lastName, user.firstName, user.middleName, user.birthday, user.email, user.phoneNumber];
-	const isValid: boolean = _.all(values, (value: string) => value !== "");
 	return (
-		isValid &&
+		user.lastName !== "" &&
+		user.firstName !== "" &&
+		user.middleName !== "" &&
+		user.birthday !== "" &&
+		user.email !== "" &&
+		user.phoneNumber !== "" &&
 		(user.photo !== "" || !photoRequired)
 	);
 }
