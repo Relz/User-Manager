@@ -1,0 +1,73 @@
+.loading
+	font-size: 20px
+	display: block
+	text-align: center
+	margin-top: 50px
+
+.loading.waiting
+	color: #A19300
+
+.loading.error
+	color: #C71F00
+
+.user_list
+	.table
+		margin: 50px auto 0 auto
+		+box-shadow(0 0 15px rgba(0, 0, 0, 0.22))
+		border-top-left-radius: 20px 20px
+		border-top-right-radius: 20px 20px
+
+		thead
+			color: #EEE
+
+			tr:first-child
+				background: transparent
+
+		th, td
+			margin: 1px
+			padding: 10px
+
+		th
+			background-color: #222
+
+		th:first-child
+			border-top-left-radius: 20px 20px
+
+		th:last-child
+			border-top-right-radius: 20px 20px
+
+		tr:nth-child(even)
+			background: #CCC
+
+		tr:nth-child(odd)
+			background: #FFF
+
+		td
+			.user_edit_img,
+			.user_remove_img,
+			.user_download_photo_img
+				cursor: pointer
+
+				&:hover
+					+border-radius(50%)
+
+			.user_download_photo_img
+				&:hover
+					background-color: #72FB6D
+
+			.user_edit_img
+				&:hover
+					background-color: #61DAFB
+
+			.user_remove_img
+				&:hover
+					background-color: #FB7772
+
+		td.user_download_photo
+			display: flex
+			justify-content: flex-start
+			flex-direction: row
+			align-items: baseline
+
+			.user_download_photo_link
+				margin-left: auto
